@@ -12,6 +12,18 @@ fn what_is_your_name() -> String {
 fn main() {
   println!("Hello, what's your name?");
   let name = what_is_your_name();
+	let visitor_list = ["bert", "bart", "kak"];
+	let mut allowed = false;
+	for visitor in &visitor_list {
+		if &name == visitor {
+			allowed = true;
+			break;
+		}
+	}
 
-	println!("Hello, {}", name);     
+	if allowed {
+		println!("Hello, {}", name);     
+	} else {
+		println!("Sorry, you're not on the list");     
+	}
 }
